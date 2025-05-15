@@ -1,10 +1,22 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from './config/config.module';
+import { RedisModule } from './redis/redis.module';
+import { SwaggerModuleConfig } from './swagger/swagger.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { ArticlesModule } from './modules/article/article.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { TypeormConfig } from './database/database.config';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule,
+    TypeOrmModule.forRootAsync({
+      useClass: TypeormConfig,
+    }),
+    RedisModule,
+    AuthModule,
+    ArticlesModule,
+    SwaggerModuleConfig,
+  ],
 })
 export class AppModule {}
