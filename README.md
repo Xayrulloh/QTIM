@@ -37,7 +37,11 @@ cd QTIM
 ```bash
 cp .env.example .env
 ```
-3. Run the application using docker compose
+3. Install and Build
+```bash
+pnpm install && pnpm build
+```
+4. Run the application using docker compose
 ```bash
 docker compose up --build
 ```

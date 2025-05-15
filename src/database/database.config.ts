@@ -17,6 +17,7 @@ export class TypeormConfig implements TypeOrmOptionsFactory {
       password: this.configService.get('config.database.password'),
       database: this.configService.get('config.database.database'),
       logging: true,
+      migrations: ['src/database/migrations/*.{ts,js}'],
       migrationsRun: true,
       entities: [Article, User],
     } as TypeOrmModuleOptions;
