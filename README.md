@@ -33,15 +33,11 @@ A NestJS-based API for managing articles with authentication, caching, and datab
 git clone https://github.com/Xayrulloh/QTIM.git
 cd QTIM
 ```
-2. Install dependencies
-```bash
-pnpm install
-```
-3. Set up environment variables: (Edit .env with your configuration.)
+2. Set up environment variables: (Edit .env with your configuration.)
 ```bash
 cp .env.example .env
 ```
-4. Run the application using docker compose
+3. Run the application using docker compose
 ```bash
 docker compose up --build
 ```

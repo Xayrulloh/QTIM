@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "8000:8000"
+  postgres:
+    image: "postgres:alpine"
+    environment:
+      POSTGRES_PASSWORD: postgres
+  redis:
+    image: "redis:alpine"
