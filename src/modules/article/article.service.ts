@@ -7,8 +7,8 @@ import {
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, MoreThanOrEqual, LessThanOrEqual, IsNull } from 'typeorm';
 import { CACHE_MANAGER, Cache } from '@nestjs/cache-manager';
-import { Article } from 'src/database/entities/article.entity';
-import { User } from 'src/database/entities/user.entity';
+import { Article } from '../../database/entities/article.entity';
+import { User } from '../../database/entities/user.entity';
 import { ArticleFilterDto } from './dto/article-filter.dto';
 import { CreateArticleDto } from './dto/create-article.dto';
 import { UpdateArticleDto } from './dto/update-article.dto';
